@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="js/js.js" ></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text"  class="form-control" title="number1" id="number1">
+<select  class="form-control"  title="select" id="select">
+    <option>+</option>
+    <option>-</option>
+    <option>/</option>
+    <option>*</option>
+</select>
+
+<input type="text"  class="form-control" title="number" id="number2">
+<div></div>
+<button type="submit" onclick="FuncGum()" >Confirm identity</button>
+<div id="answer"></div>
+<script >
+
+    function FuncGum() {
+        var number1 = document.getElementById("number1").value;
+        var number2 = document.getElementById("number2").value;
+        var select = document.getElementById("select").options.selectedIndex;
+        var answer = document.getElementById("answer");
+        if (select == 0) {
+
+            answer.innerHTML = parseInt(number1) + parseInt(number2);
+
+        }
+        if (select == 1) {
+            answer.innerHTML = parseInt(number1) - parseInt(number2);
+        }
+        if (select == 2) {
+            answer.innerHTML = parseInt(number1) / parseInt(number2);
+        }
+        if  (select == 3 ) {
+            answer.innerHTML = parseInt(number1) * parseInt(number2);
+        }
+        }
+
+</script>
+</body>
+</html>
